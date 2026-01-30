@@ -1,0 +1,33 @@
+body {
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+h1 {
+    color: #1f3a8a;
+}
+
+input {
+    padding: 7px;
+    margin: 10px;
+    border: 1px solid #1f3a8a;
+    border-radius: 3px;
+}
+
+button {
+    padding: 7px 15px;
+    border: none;
+    border-radius: 3px;
+    background-color: #1f3a8a;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #162f6b;
+}
+
+p {
+    color: #374151;
+}

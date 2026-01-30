@@ -1,0 +1,33 @@
+body {
+    font-family: "Comic Sans MS", cursive;
+    text-align: center;
+    background-color: #fff3cd;
+}
+
+h1 {
+    color: #ff5733;
+}
+
+input {
+    padding: 6px;
+    margin: 10px;
+    border: 2px dashed #ff5733;
+    border-radius: 12px;
+}
+
+button {
+    padding: 6px 14px;
+    border: none;
+    border-radius: 12px;
+    background-color: #ff5733;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c70039;
+}
+
+p {
+    color: #ff5733;
+}
