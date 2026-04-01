@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locadora Filmes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Locadora de Filmes</h1>
+        <div class="header-actions">
+            <select id="filtro" onchange="filtrar()">
+                <option value="todos">Todos</option>
+                <option value="Animação">Animação</option>
+                <option value="Ação">Ação</option>
+                <option value="Terror">Terror</option>
+            </select>
+            <button onclick="abrirModal()">+ Novo Filme</button>
+        </div>
+    </header>
+
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Capa</th>
+                    <th>Nome</th>
+                    <th>Gênero</th>
+                    <th>Ano</th>
+                    <th>Classificação</th>
+                    <th>Produtora</th>
+                    <th>Excluir</th>
+                </tr>
+            </thead>
+            <tbody id="dados"></tbody>
+        </table>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2>Novo Filme</h2>
+            <input type="text" id="capa" placeholder="URL da Capa">
+            <input type="text" id="nome" placeholder="Nome">
+            <input type="text" id="genero" placeholder="Gênero">
+            <input type="date" id="data" placeholder="Data de Lançamento">
+            <input type="text" id="classificacao" placeholder="Classificação">
+            <input type="text" id="produtora" placeholder="Produtora">
+
+            <div class="modal-buttons">
+                <button onclick="salvarFilme()">Salvar</button>
+                <button onclick="fecharModal()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
