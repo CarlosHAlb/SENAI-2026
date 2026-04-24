@@ -1,0 +1,161 @@
+/* Reset e Fonte */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Variáveis de Cores do Usuário */
+:root {
+    --p1: #6d6d6d;    /* Tomato - Header/Footer */
+    --p2: #6d6d6d;    /* Orange - Cards */
+    --p3: #ff3838;    /* Gold - Botões */
+    --p4: #ADFF2F;    /* GreenYellow - Janela Modal */
+    --p5: #FFFFFF;    /* White */
+    --t1: rgba(255, 255, 255, 0.6); /* Overlay do Modal */
+    --t2: rgba(0, 0, 0, 0.6);       /* Bordas/Sombra */
+}
+
+body {
+    background-color: var(--p5);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden; /* Evita barra lateral horizontal */
+}
+
+header,
+footer {
+    background-color: var(--p1);
+    width: 100%;
+    min-height: 10vh; /* min-height é melhor para responsividade */
+    padding: 20px;
+    text-align: center;
+    color: var(--p5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main {
+    width: 90%;
+    min-height: 80vh;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start; /* Alinha os cards no topo */
+}
+
+/* Campos de formulário */
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--t2);
+    border-radius: 5px;
+}
+
+button {
+    background-color: var(--p3);
+    color: #333; /* Texto escuro no botão dourado para melhor leitura */
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* Estilo do Card de Carro */
+.card {
+    background-color: var(--p2);
+    width: 250px;
+    min-height: 350px; /* Aumentado um pouco para caber texto e imagem */
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    gap: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    color: var(--p5);
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px; /* Altura fixa para manter o padrão */
+    border-radius: 10px; /* Se quiser redondo como o seu, use 50% */
+    object-fit: cover;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Estrutura do Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--t2); /* Mudei para t2 para destacar mais o fundo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.janela {
+    background-color: var(--p4);
+    width: 90%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.oculto {
+    display: none !important;
+}
+
+/* Preview da imagem dentro do cadastro */
+#imgPreview {
+    max-width: 100%;
+    max-height: 150px;
+    display: block;
+    margin: 10px auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Ajuste para o botão de fechar (X) dentro da janela */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--t2);
+}
